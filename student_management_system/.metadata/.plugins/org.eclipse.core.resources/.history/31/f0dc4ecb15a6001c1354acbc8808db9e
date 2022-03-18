@@ -1,0 +1,9 @@
+package com.testinium.sms.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.testinium.sms.domain.Result;
+
+public interface ResultRespository extends JpaRepository<Result,String>{
+
+}

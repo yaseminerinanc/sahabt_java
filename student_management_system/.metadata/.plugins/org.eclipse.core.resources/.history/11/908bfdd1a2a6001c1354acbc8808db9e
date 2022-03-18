@@ -1,0 +1,7 @@
+package com.testinium.sms.service.Impl;
+
+import com.testinium.sms.service.ResultService;
+
+public class ResultServiceImpl implements ResultService {
+
+}

@@ -1,0 +1,61 @@
+package com.testinium.sms.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "EXAM_ITEM")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ExamItem {
+	
+	 @Id
+	    @GeneratedValue(generator = "uuid")
+	    @GenericGenerator(name = "uuid", strategy = "uuid2")
+	    @Column(name = "CART_ITEM_ID", updatable = false, nullable = false)
+	    private String cartItemId;
+
+	    @Column(name = "MIDTERM_GRADE", nullable = false)
+	    private double midTerm;
+
+	    @Column(name = "FINALEXAM_GRADE", nullable = false)
+	    private double finalExam;
+	    
+	    @Column(name = "LETTER_GRADE", nullable = false)
+	    private String letterGrade;
+	    
+	    @Column(name = "AVG_GRADE", nullable = false)
+	    private double averageGrade;
+	    
+	    @Column(name = "LESSON_ID", nullable = false)
+	    private String productId;
+
+	    @Column(name = "LESSON_NAME", nullable = false)
+	    private String lessonName;
+	    
+	    @ManyToOne
+	    @JoinColumn(name = "EXAM_ID")
+	    @JsonIgnore
+	    private Exam exam;
+	    
+	  
+	    
+
+
+}

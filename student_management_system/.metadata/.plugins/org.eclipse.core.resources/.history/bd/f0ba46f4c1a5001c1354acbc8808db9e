@@ -1,0 +1,19 @@
+package com.testinium.sms.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Result {
+	
+	 	private Student student;
+	    private Lesson course;
+	    private Exam score;
+	    private Rank rank;
+	    
+	    public enum Rank{E, D, C, B, A}
+
+}

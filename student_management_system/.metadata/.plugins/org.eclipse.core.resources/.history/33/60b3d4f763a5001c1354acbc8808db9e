@@ -1,0 +1,12 @@
+package com.testinium.sms.domain;
+
+public class Grade {
+	
+	 	private Student student;
+	    private Lesson course;
+	    private Avarage score;
+	    private Rank rank;
+	    
+	    public enum Rank{E, D, C, B, A}
+
+}

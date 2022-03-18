@@ -1,0 +1,10 @@
+package com.testinium.sms.service.Impl;
+
+import org.springframework.stereotype.Service;
+
+import com.testinium.sms.service.ResultService;
+
+@Service
+public class ResultServiceImpl implements ResultService {
+
+}

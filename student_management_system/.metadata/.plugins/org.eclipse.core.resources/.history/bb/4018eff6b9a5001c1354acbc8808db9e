@@ -1,0 +1,69 @@
+package com.testinium.sms.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Exam {
+	
+	private double midterm;
+	private double finalExam;
+	private double averageGrade;
+	private String letterGrade;
+	
+	public void calcAverageGrade()
+	{
+		averageGrade = (30*midterm + 70*finalExam)/100;
+		calcLetterGrade();
+	}
+	
+	/** Calculates the letter grade based on average grade of a student.
+	 */
+	public void calcLetterGrade()
+	{
+		if (averageGrade<=100 && averageGrade>=90)
+		{
+			letterGrade = "A+";
+		}
+		else if (averageGrade>=85)
+		{
+			letterGrade = "A";
+		}
+		else if (averageGrade>=80)
+		{
+			letterGrade = "A-";
+		}
+		else if (averageGrade>=75)
+		{
+			letterGrade = "B+";
+		}
+		else if (averageGrade>=70)
+		{
+			letterGrade = "B";
+		}
+		else if (averageGrade>=65)
+		{
+			letterGrade = "C+";
+		}
+		else if (averageGrade>=60)
+		{
+			letterGrade = "C";
+		}
+		else if (averageGrade>=55)
+		{
+			letterGrade = "D+";
+		}
+		else if (averageGrade>=50)
+		{
+			letterGrade = "D";
+		}
+		else
+		{
+			letterGrade = "F";
+		}
+	}
+
+}

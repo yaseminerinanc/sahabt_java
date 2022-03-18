@@ -1,0 +1,5 @@
+package com.testinium.sms.repository;
+
+public interface ExamRepository {
+
+}

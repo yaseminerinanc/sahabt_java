@@ -1,0 +1,10 @@
+package com.testinium.sms.domain;
+
+public class Exam {
+	
+	private double midterm;
+	private double finalExam;
+	private double averageGrade;
+	private String letterGrade;
+
+}

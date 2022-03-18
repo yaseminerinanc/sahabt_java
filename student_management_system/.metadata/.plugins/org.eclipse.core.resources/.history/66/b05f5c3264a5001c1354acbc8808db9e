@@ -1,0 +1,16 @@
+package com.testinium.sms.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Avarage {
+	
+	private double avgMidterm;
+	private double avgFinalExam;
+	private double AverageGrade;
+
+}

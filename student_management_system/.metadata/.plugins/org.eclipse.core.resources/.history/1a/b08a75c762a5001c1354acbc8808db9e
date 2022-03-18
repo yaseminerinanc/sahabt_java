@@ -1,0 +1,10 @@
+package com.testinium.sms.domain;
+
+public class Grade {
+	
+	 	private Student student;
+	    private Lesson course;
+	    private Avarage score;
+	    private Rank rank;
+
+}

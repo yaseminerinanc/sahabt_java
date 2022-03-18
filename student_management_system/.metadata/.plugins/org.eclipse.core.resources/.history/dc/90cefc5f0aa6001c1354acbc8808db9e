@@ -1,0 +1,5 @@
+package com.testinium.sms.controller;
+
+public class LessonController {
+
+}

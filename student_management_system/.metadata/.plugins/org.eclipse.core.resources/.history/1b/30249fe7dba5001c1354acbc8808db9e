@@ -1,0 +1,29 @@
+package com.testinium.sms.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Entity
+@Table(name = "RESULT")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Result {
+	
+	 	private Student student;
+	    private Lesson course;
+	    private Exam score;
+	    private Rank rank;
+	    private String schoolYear;
+	    private String schoolYearStatus;
+	    
+	    public enum Rank{E, D, C, B, A}
+
+}

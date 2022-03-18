@@ -1,0 +1,54 @@
+package com.testinium.sms.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "EXAM_ITEM")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ExamItem {
+	
+	 @Id
+	    @GeneratedValue(generator = "uuid")
+	    @GenericGenerator(name = "uuid", strategy = "uuid2")
+	    @Column(name = "CART_ITEM_ID", updatable = false, nullable = false)
+	    private String cartItemId;
+
+	    @Column(name = "QUANTITY", nullable = false)
+	    private int quantity;
+
+	    @Column(name = "ITEM_PRICE", nullable = false)
+	    private double itemPrice;
+
+	    @Column(name = "EXTENDED_PRICE", nullable = false)
+	    private double extendedPrice;
+	    
+	    @Column(name = "PRODUCT_ID", nullable = false)
+	    private String productId;
+
+	    @Column(name = "PRODUCT_NAME", nullable = false)
+	    private String productName;
+	    
+	    @ManyToOne
+	    @JoinColumn(name = "CART_ID")
+	    @JsonIgnore
+	    private Exam exam;
+
+}

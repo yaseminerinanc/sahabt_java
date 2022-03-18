@@ -1,0 +1,25 @@
+package com.testinium.sms.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "LESSON")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Lesson {
+	
+	private String no;
+	private String lessonName;
+    private Result grade;
+    //private ExamType examType;
+
+}

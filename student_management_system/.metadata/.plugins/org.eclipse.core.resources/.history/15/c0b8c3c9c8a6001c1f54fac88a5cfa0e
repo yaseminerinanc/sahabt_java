@@ -1,0 +1,41 @@
+package com.testinium.sms;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+
+import com.testinium.sms.domain.Student;
+
+public class StudentServiceImplTest {
+	
+	  @Test
+	    public void studentSave() {
+	        Student st = new Student();
+	        st.setName("User");
+	        st.setStudentId("testMail@test.com");
+	        st.setExams(null);
+
+	        boolean isUserCreated = userService.addUser(user);
+
+	        assertTrue(isUserCreated);
+
+	        verify(userRepository, times(1)).save(user);
+	    }
+	  
+	   @Test
+	    public void loadUserByUsername() {
+	        User user = new User();
+	        user.setEmail("testMail@test.com");
+
+	        when(userRepository.findByEmail("testMail@test.com")).thenReturn(user);
+
+	        verify(userRepository, times(1)).findByEmail("testMail@test.com");
+
+	        assertEquals("testMail@test.com", user.getEmail());
+	    }
+
+}

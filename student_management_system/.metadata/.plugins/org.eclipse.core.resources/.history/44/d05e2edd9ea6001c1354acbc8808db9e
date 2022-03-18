@@ -1,0 +1,5 @@
+package com.testinium.sms.service.Impl;
+
+public class ResultServiceImpl {
+
+}

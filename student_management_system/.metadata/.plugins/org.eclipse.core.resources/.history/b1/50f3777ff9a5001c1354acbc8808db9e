@@ -1,0 +1,5 @@
+package com.testinium.sms.config;
+
+public class SwaggerConfig {
+
+}

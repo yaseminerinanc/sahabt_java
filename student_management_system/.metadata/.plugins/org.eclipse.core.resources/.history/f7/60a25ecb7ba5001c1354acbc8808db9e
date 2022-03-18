@@ -1,0 +1,17 @@
+package com.testinium.sms.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Lesson {
+	
+	private String no;
+	private String lessonName;
+    private Grade grade;
+    //private ExamType examType;
+
+}
